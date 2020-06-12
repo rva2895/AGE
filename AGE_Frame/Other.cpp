@@ -22,12 +22,12 @@ genie::GameVersion AGE_Frame::version(int ver)
         case EV_AoKB: return genie::GV_AoKB;
         case EV_AoK: return genie::GV_AoK;
         case EV_TC: return genie::GV_TC;
-		case EV_TC_t: return genie::GV_TC_t;
+        case EV_TC_t: return genie::GV_TC_t;
         case EV_Cysion: return genie::GV_Cysion;
         case EV_DE2: return genie::GV_C2;
         case EV_SWGB: return genie::GV_SWGB;
         case EV_CC: return genie::GV_CC;
-		case EV_CC_t: return genie::GV_CC_t;
+        case EV_CC_t: return genie::GV_CC_t;
         case EV_EF: return genie::GV_CC_t;
         case EV_Tapsa: return genie::GV_Tapsa;
 
@@ -2835,20 +2835,20 @@ void AGE_Frame::OnMenuOption(wxCommandEvent &event)
                                 FilesToRead.Add("\\interfac_x2.drs");
                                 FilesToRead.Add("\\gamedata_x2.drs");
 
-								FilesToRead.Add("\\sounds_x1.drs");
-								FilesToRead.Add("\\graphics_x1_p1.drs");
-								FilesToRead.Add("\\terrain_x1_p1.drs");
-								FilesToRead.Add("\\interfac_x1_p1.drs");
-								FilesToRead.Add("\\gamedata_x1.drs");
+                                FilesToRead.Add("\\sounds_x1.drs");
+                                FilesToRead.Add("\\graphics_x1_p1.drs");
+                                FilesToRead.Add("\\terrain_x1_p1.drs");
+                                FilesToRead.Add("\\interfac_x1_p1.drs");
+                                FilesToRead.Add("\\gamedata_x1.drs");
                             }
-							else
-							{
-								FilesToRead.Add("\\sounds_x1.drs");
-								FilesToRead.Add("\\graphics_x1.drs");
-								FilesToRead.Add("\\terrain_x1.drs");
-								FilesToRead.Add("\\interfac_x1.drs");
-								FilesToRead.Add("\\gamedata_x1.drs");
-							}
+                            else
+                            {
+                                FilesToRead.Add("\\sounds_x1.drs");
+                                FilesToRead.Add("\\graphics_x1.drs");
+                                FilesToRead.Add("\\terrain_x1.drs");
+                                FilesToRead.Add("\\interfac_x1.drs");
+                                FilesToRead.Add("\\gamedata_x1.drs");
+                            }
                         }
                     }
                     FilesToRead.Add("\\sounds.drs");

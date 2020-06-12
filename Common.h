@@ -96,11 +96,11 @@ enum EditableVersion
     EV_AoKB,
     EV_AoK,
     EV_TC,
-	EV_TC_t,
+    EV_TC_t,
     EV_Cysion,
     EV_SWGB,
     EV_CC,
-	EV_CC_t,
+    EV_CC_t,
     EV_EF,
     EV_Tapsa,
     EV_DE2
