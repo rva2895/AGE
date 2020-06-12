@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B075228-B78D-4A20-BF90-CEAF1E009EE5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\include;C:\Users\Vasya\Documents\zlib-1.2.11;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include\msvc;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\genieutils-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\lib\vc_lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1\stage\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\AGE-master\Debug;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>genieutils-msvc.lib;libiconv.lib;sfml-audio.lib;pcrio-msvc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\include;C:\Users\Vasya\Documents\zlib-1.2.11;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include\msvc;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\genieutils-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\lib\vc_lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1\stage\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\AGE-master\Release;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>genieutils-msvc.lib;libiconv.lib;sfml-audio.lib;pcrio-msvc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\include;C:\Users\Vasya\Documents\zlib-1.2.11;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include\msvc;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\genieutils-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>genieutils-msvc.lib;libiconv.lib;sfml-audio.lib;pcrio-msvc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\lib\vc_x64_lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1\stage\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\AGE-master\x64\Debug;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\lib64;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\include;C:\Users\Vasya\Documents\zlib-1.2.11;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include\msvc;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\genieutils-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\include;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>genieutils-msvc.lib;libiconv.lib;sfml-audio.lib;pcrio-msvc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\lib\vc_x64_lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\boost_1_65_1\stage\lib;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\AGE-master\x64\Release;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\iconv-for-windows-master\lib64;C:\Users\Vasya\Documents\Visual Studio 2015\Projects\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Vasya\Documents\Visual Studio 2015\Projects\wx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AGE_AboutDialog.cpp" />
+    <ClCompile Include="AGE_CheckBoxes.cpp" />
+    <ClCompile Include="AGE_ComboBoxes.cpp" />
+    <ClCompile Include="age_frame\Civs.cpp" />
+    <ClCompile Include="age_frame\Constructor.cpp" />
+    <ClCompile Include="age_frame\General.cpp" />
+    <ClCompile Include="age_frame\Graphics.cpp" />
+    <ClCompile Include="age_frame\Other.cpp" />
+    <ClCompile Include="age_frame\PlayerColors.cpp" />
+    <ClCompile Include="age_frame\Research.cpp" />
+    <ClCompile Include="age_frame\Sounds.cpp" />
+    <ClCompile Include="age_frame\Techs.cpp" />
+    <ClCompile Include="age_frame\TechTrees.cpp" />
+    <ClCompile Include="age_frame\TerrainBorders.cpp" />
+    <ClCompile Include="age_frame\TerrainRestrictions.cpp" />
+    <ClCompile Include="age_frame\Terrains.cpp" />
+    <ClCompile Include="age_frame\UnitLine.cpp" />
+    <ClCompile Include="age_frame\Units.cpp" />
+    <ClCompile Include="AGE_OpenDialog.cpp" />
+    <ClCompile Include="AGE_OpenSave.cpp" />
+    <ClCompile Include="AGE_SaveDialog.cpp" />
+    <ClCompile Include="AGE_TextControls.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="misc files\tooltip.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="misc files\zlib.cpp" />
+    <ClCompile Include="rmcc.cpp" />
+    <ClCompile Include="SharedComboPopup.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AGE_AboutDialog.h" />
+    <ClInclude Include="AGE_CheckBoxes.h" />
+    <ClInclude Include="AGE_ComboBoxes.h" />
+    <ClInclude Include="AGE_Copies.hpp" />
+    <ClInclude Include="AGE_Frame.h" />
+    <ClInclude Include="AGE_OpenDialog.h" />
+    <ClInclude Include="AGE_OpenSave.h" />
+    <ClInclude Include="AGE_SaveDialog.h" />
+    <ClInclude Include="AGE_TextControls.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="misc files\tooltip.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="SharedComboPopup.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

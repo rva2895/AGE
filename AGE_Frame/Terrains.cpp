@@ -360,7 +360,8 @@ wxThread::ExitCode Loader::Entry()
             size_t warea = wwidth * wheight + 1;
             vector<uint8_t> wrgbdata(warea * 4, 0);
 
-            pair<size_t, size_t> corners[rows * cols];
+            //pair<size_t, size_t> corners[rows * cols];
+			pair<size_t, size_t>* corners = (pair<size_t, size_t>*)malloc(rows*cols * sizeof(pair<size_t, size_t>));
             for(int c = 0; c < cols; ++c)
             for(int r = 0; r < rows; ++r)
             {
@@ -408,6 +409,9 @@ wxThread::ExitCode Loader::Entry()
                     }
                 }
             }
+
+			free(corners);
+
             tileSLP.xpos = wwidth / 2;
             tileSLP.ypos = wheight / 2;
             unsigned char *pic = (unsigned char*)wrgbdata.data();
@@ -478,6 +482,10 @@ void AGE_Frame::OnTerrainsBorderSearch(wxCommandEvent &event)
 
 void AGE_Frame::ListTerrainsBorders()
 {
+	//ignore borders
+	if (GenieVersion == genie::GV_TC_t || GenieVersion == genie::GV_CC_t)
+		return;
+
     InitSearch(Terrains_Borders_Search->GetValue().MakeLower(), Terrains_Borders_Search_R->GetValue().MakeLower());
 
     Terrains_Borders_ListV->Sweep();

@@ -1871,7 +1871,8 @@ void AGE_Frame::LoadLists()
     OnTerrainSelect(e);
     OnTerrainRestrictionsTerrainSelect(e);
     OnPlayerColorSelect(e);
-    OnTerrainBorderSelect(e);
+	if(GenieVersion != genie::GV_TC_t && GenieVersion != genie::GV_CC_t)
+		OnTerrainBorderSelect(e);
     OnRandomMapSelect(e);
     if(GenieVersion >= genie::GV_AoKA)
     {
@@ -2426,7 +2427,8 @@ void AGE_Frame::OnSave(wxCommandEvent&)
         }
 
         // A fix that should never be needed
-        int TerrainsInData = dataset->TerrainBlock.Terrains.size();
+		// .. and was removed because it breaks extra terrains code
+        /*int TerrainsInData = dataset->TerrainBlock.Terrains.size();
         int BordersInTerrains = 0;
         for(int terrain = 0; terrain < TerrainsInData; ++terrain)
         {
@@ -2440,7 +2442,7 @@ void AGE_Frame::OnSave(wxCommandEvent&)
             viesti += "\nLoaded game version: " + lexical_cast<string>(dataset->TerrainBlock.getGameVersion());
             viesti += "\nTerrain game version: " + lexical_cast<string>(dataset->TerrainBlock.Terrains.front().getGameVersion());
             wxMessageBox(viesti);
-        }
+        }*/
         // <-- ends here
 
         try
@@ -3726,7 +3728,9 @@ bool AGE_Frame::FileExists(const char * value)
 
 void AGE_Frame::LoadTXT(const wxString &filename)
 {
-    ifstream infile(filename);
+	char* fname = (char*)malloc(filename.length() + 1);
+	strcpy(fname, filename.c_str());
+	ifstream infile(fname);
     string line;
     while(getline(infile, line))
     {
@@ -3743,6 +3747,7 @@ void AGE_Frame::LoadTXT(const wxString &filename)
             if(len) LangTxt[ID] = line.substr(beg, len);
         }
     }
+	free(fname);
 }
 
 wxString AGE_Frame::TranslatedText(int ID, int letters)
@@ -3766,10 +3771,12 @@ wxString AGE_Frame::TranslatedText(int ID, int letters)
         }
         else // Does not work when building as 64-bit
         {
-            char buffer[letters];
+            //char buffer[letters];
+			char* buffer = (char*)malloc(letters);
             if(LangsUsed & 4 && LoadStringA(LanguageDLL[2], ID, buffer, letters)) result = buffer;
             else if(LangsUsed & 2 && LoadStringA(LanguageDLL[1], ID, buffer, letters)) result = buffer;
             else if(LangsUsed & 1 && LoadStringA(LanguageDLL[0], ID, buffer, letters)) result = buffer;
+			free(buffer);
         }
         result.Replace("\n", "\r\n");
     }

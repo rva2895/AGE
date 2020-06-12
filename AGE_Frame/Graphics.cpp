@@ -1721,7 +1721,10 @@ void AGE_Frame::CreateGraphicsControls()
         if(dd.ShowModal() == wxID_OK && dataset)
         {
             wxBusyCursor WaitCursor;
-            ifstream infile(dd.GetPath());
+			wxString filename = dd.GetPath();
+			char* fname = (char*)malloc(filename.length() + 1);
+			strcpy(fname, filename.c_str());
+            ifstream infile(fname);
             string line;
             while(getline(infile, line))
             {
@@ -1822,6 +1825,9 @@ void AGE_Frame::CreateGraphicsControls()
                 }
                 LINE_PARSED:;
             }
+
+			free(fname);
+
             // In case the currently viewed graphics was changed.
             gallery.slpID = RELOAD;
             ListGraphicDeltas();
