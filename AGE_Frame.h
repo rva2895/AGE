@@ -940,6 +940,17 @@ private:
     unsigned setbearing;
     float bearing;
 
+    struct SWGB_Offsets
+    {
+        int32_t worker;
+        int32_t commander;
+        int32_t temple;
+        int32_t cargo_trader;
+        int32_t icon_bldg;
+        int32_t icon_unit;
+        int32_t icon_tech;
+    } swgbOffsets;
+
 public:
 //  Constants, remove unneeded entries.
 
